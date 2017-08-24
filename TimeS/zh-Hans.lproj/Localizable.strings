@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  TimerS
+
+  Created by Shaobai Li on 24/8/17.
+  Copyright © 2017 Shaobai. All rights reserved.
+*/
+"Timer" = "计时器";
+
+"s" = "秒";
+"m" = "分钟";
+"h" = "小时";
+
+"sec" = "秒";
+"min" = "分钟";
+"hours" = "小时";
+
+"Start" = "开始";
+"Stop" = "停止";
+
+"On" = "打开";
+"Off" = "关闭";
+
+"Screen Brightness Lock" = "屏幕亮度锁定";
+"Stopwatch" = "倒计时";
+
+"Announcer" = "播报员";

@@ -1,0 +1,135 @@
+
+/* Class = "UIButton"; normalTitle = "60s"; ObjectID = "2fJ-7r-Feg"; */
+"2fJ-7r-Feg.normalTitle" = "60s";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "2fc-Mt-Q7C"; */
+"2fc-Mt-Q7C.text" = "Title";
+
+/* Class = "UILabel"; text = "Tree"; ObjectID = "4rT-Vz-AsH"; */
+"4rT-Vz-AsH.text" = "Tree";
+
+/* Class = "UILabel"; text = "Five minutes remaining"; ObjectID = "6vJ-U8-jUd"; */
+"6vJ-U8-jUd.text" = "Five minutes remaining";
+
+/* Class = "UITableViewSection"; footerTitle = "Keep the screen from automatically dimming while timer running."; ObjectID = "9MD-eF-9V9"; */
+"9MD-eF-9V9.footerTitle" = "時鐘運行時防止屏幕自動鎖定。";
+
+/* Class = "UITableViewSection"; headerTitle = "SCREEN SETTINGS"; ObjectID = "9MD-eF-9V9"; */
+"9MD-eF-9V9.headerTitle" = "屏幕設置";
+
+/* Class = "UILabel"; text = "Press Here to Reset"; ObjectID = "B7a-oY-vSU"; */
+"B7a-oY-vSU.text" = "輕按重置";
+
+/* Class = "UITableViewSection"; headerTitle = "Countdown"; ObjectID = "CtV-Ad-kPm"; */
+"CtV-Ad-kPm.headerTitle" = "倒計時";
+
+/* Class = "UILabel"; text = "Four"; ObjectID = "ECZ-jH-GBb"; */
+"ECZ-jH-GBb.text" = "Four";
+
+/* Class = "UILabel"; text = "Seven"; ObjectID = "GFn-mn-f0g"; */
+"GFn-mn-f0g.text" = "Seven";
+
+/* Class = "UILabel"; text = "Nine"; ObjectID = "GkF-Qt-1On"; */
+"GkF-Qt-1On.text" = "Nine";
+
+/* Class = "UILabel"; text = "Overtime"; ObjectID = "GoT-fB-dRg"; */
+"GoT-fB-dRg.text" = "Overtime";
+
+/* Class = "UINavigationItem"; title = "Setting"; ObjectID = "Gpn-YK-vBE"; */
+"Gpn-YK-vBE.title" = "設置";
+
+/* Class = "UILabel"; text = "Off"; ObjectID = "L6P-QA-XUA"; */
+"L6P-QA-XUA.text" = "Off";
+
+/* Class = "UILabel"; text = "One"; ObjectID = "LPD-1v-eo9"; */
+"LPD-1v-eo9.text" = "One";
+
+/* Class = "UILabel"; text = "Ten"; ObjectID = "Mc5-Lf-oGW"; */
+"Mc5-Lf-oGW.text" = "Ten";
+
+/* Class = "UILabel"; text = "Ten seconds remaining"; ObjectID = "NhF-w4-qkK"; */
+"NhF-w4-qkK.text" = "Ten seconds remaining";
+
+/* Class = "UILabel"; text = "Fifteen minutes remaining"; ObjectID = "PnL-tl-e7L"; */
+"PnL-tl-e7L.text" = "Fifteen minutes remaining";
+
+/* Class = "UIButton"; normalTitle = "45s"; ObjectID = "SVA-tz-sW5"; */
+"SVA-tz-sW5.normalTitle" = "45s";
+
+/* Class = "UINavigationItem"; title = "Screen Brightness Lock"; ObjectID = "TXa-xl-m3o"; */
+"TXa-xl-m3o.title" = "屏幕亮度鎖定";
+
+/* Class = "UILabel"; text = "Announcer"; ObjectID = "VBs-Mb-FPM"; */
+"VBs-Mb-FPM.text" = "播報員";
+
+/* Class = "UINavigationItem"; title = "Replaced by UILabel for tap action"; ObjectID = "WB4-9X-mJo"; */
+"WB4-9X-mJo.title" = "Replaced by UILabel for tap action";
+
+/* Class = "UINavigationItem"; title = "Announcer"; ObjectID = "WgP-cA-mD1"; */
+"WgP-cA-mD1.title" = "播報員";
+
+/* Class = "UILabel"; text = "Six"; ObjectID = "Wou-eg-mFd"; */
+"Wou-eg-mFd.text" = "Six";
+
+/* Class = "UILabel"; text = "Screen Brightnesss Lock"; ObjectID = "X5f-2B-qMW"; */
+"X5f-2B-qMW.text" = "屏幕亮度鎖定";
+
+/* Class = "UILabel"; text = "Two"; ObjectID = "Z3Q-G2-rEi"; */
+"Z3Q-G2-rEi.text" = "Two";
+
+/* Class = "UILabel"; text = "Ten minutes remaining"; ObjectID = "c6j-HN-Ip7"; */
+"c6j-HN-Ip7.text" = "Ten minutes remaining";
+
+/* Class = "UIButton"; normalTitle = " Timer 1:   1:30"; ObjectID = "d0N-Fo-CBq"; */
+"d0N-Fo-CBq.normalTitle" = " Timer 1:   1:30";
+
+/* Class = "UIButton"; normalTitle = " Timer 3:   10:20"; ObjectID = "dGa-wL-YhX"; */
+"dGa-wL-YhX.normalTitle" = " Timer 3:   10:20";
+
+/* Class = "UILabel"; text = "Two minutes remaining"; ObjectID = "dMi-Mq-Eqa"; */
+"dMi-Mq-Eqa.text" = "Two minutes remaining";
+
+/* Class = "UILabel"; text = "Five seconds remaining"; ObjectID = "dfc-dY-6DC"; */
+"dfc-dY-6DC.text" = "Five seconds remaining";
+
+/* Class = "UILabel"; text = "Five"; ObjectID = "fSQ-WU-41g"; */
+"fSQ-WU-41g.text" = "Five";
+
+/* Class = "UILabel"; text = "Three minutes remaining"; ObjectID = "g3K-wU-5o8"; */
+"g3K-wU-5o8.text" = "Three minutes remaining";
+
+/* Class = "UILabel"; text = "Reset To Default"; ObjectID = "gXm-t0-rtQ"; */
+"gXm-t0-rtQ.text" = "Reset To Default";
+
+/* Class = "UIButton"; normalTitle = "30s"; ObjectID = "hZ8-Qy-QDq"; */
+"hZ8-Qy-QDq.normalTitle" = "30s";
+
+/* Class = "UILabel"; text = "Thirty seconds remaining"; ObjectID = "kA8-v2-024"; */
+"kA8-v2-024.text" = "Thirty seconds remaining";
+
+/* Class = "UIButton"; normalTitle = " Timer 2:   30s"; ObjectID = "mhD-ju-TyY"; */
+"mhD-ju-TyY.normalTitle" = " Timer 2:   30s";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "rTn-cR-kcE"; */
+"rTn-cR-kcE.title" = "保存";
+
+/* Class = "UILabel"; text = "Eight"; ObjectID = "rbl-rG-eoE"; */
+"rbl-rG-eoE.text" = "Eight";
+
+/* Class = "UILabel"; text = "00:00:00.00"; ObjectID = "s8D-rl-nlC"; */
+"s8D-rl-nlC.text" = "00:00:00.00";
+
+/* Class = "UILabel"; text = "Four minutes remaining"; ObjectID = "uNU-Ju-CXR"; */
+"uNU-Ju-CXR.text" = "Four minutes remaining";
+
+/* Class = "UILabel"; text = "Fifteen seconds remaining"; ObjectID = "v3v-BW-nv2"; */
+"v3v-BW-nv2.text" = "Fifteen seconds remaining";
+
+/* Class = "UILabel"; text = "On"; ObjectID = "w8j-7e-IAk"; */
+"w8j-7e-IAk.text" = "On";
+
+/* Class = "UITableViewSection"; headerTitle = "remaining"; ObjectID = "yNY-hM-xnx"; */
+"yNY-hM-xnx.headerTitle" = "剩余時間";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "zFU-mS-HyZ"; */
+"zFU-mS-HyZ.normalTitle" = "開始";

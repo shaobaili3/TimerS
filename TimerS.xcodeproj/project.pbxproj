@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21BB36E81F1C8DA900187B83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB36E71F1C8DA900187B83 /* AppDelegate.swift */; };
+		21BB37061F1C903400187B83 /* UserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB37051F1C903400187B83 /* UserDefaultsModel.swift */; };
+		21BB37081F1C903800187B83 /* AnnounceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB37071F1C903800187B83 /* AnnounceModel.swift */; };
+		21BB370B1F1C91AE00187B83 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB370A1F1C91AE00187B83 /* TimePickerView.swift */; };
+		21BB370F1F1C92CA00187B83 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB370C1F1C92CA00187B83 /* SettingViewController.swift */; };
+		21BB37101F1C92CA00187B83 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB370D1F1C92CA00187B83 /* TimeViewController.swift */; };
+		21BB37141F1C95E900187B83 /* AppDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB37131F1C95E900187B83 /* AppDelegateExtension.swift */; };
+		21BB371D1F1C98E100187B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21BB371C1F1C98E100187B83 /* Assets.xcassets */; };
+		E7058EC81F286F6A0036E3CB /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7058EC61F286F6A0036E3CB /* SwitchTableViewCell.swift */; };
+		E7058EC91F286F6A0036E3CB /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7058EC71F286F6A0036E3CB /* SwitchTableViewCell.xib */; };
+		E7058ECC1F2873EB0036E3CB /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7058ECB1F2873EB0036E3CB /* UITableViewExtension.swift */; };
+		E7058ECF1F2875E90036E3CB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7058ECE1F2875E90036E3CB /* ReusableView.swift */; };
+		E7058ED11F2875EF0036E3CB /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7058ED01F2875EF0036E3CB /* NibLoadableView.swift */; };
+		E7058ED31F29A2B20036E3CB /* LockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7058ED21F29A2B20036E3CB /* LockTableViewController.swift */; };
+		E7058ED51F29BA910036E3CB /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7058ED41F29BA910036E3CB /* UITableViewCellExtension.swift */; };
+		E73575BC1F258B3400059265 /* TimeStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73575BB1F258B3400059265 /* TimeStatusModel.swift */; };
+		E76848CD1F4BB67D00313699 /* Ann_custom_countdown_0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848C21F4BB67D00313699 /* Ann_custom_countdown_0.mp3 */; };
+		E76848CE1F4BB67D00313699 /* Ann_custom_countdown_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848C31F4BB67D00313699 /* Ann_custom_countdown_1.mp3 */; };
+		E76848CF1F4BB67D00313699 /* Ann_custom_countdown_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848C41F4BB67D00313699 /* Ann_custom_countdown_2.mp3 */; };
+		E76848D01F4BB67D00313699 /* Ann_custom_countdown_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848C51F4BB67D00313699 /* Ann_custom_countdown_3.mp3 */; };
+		E76848D11F4BB67D00313699 /* Ann_custom_countdown_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848C61F4BB67D00313699 /* Ann_custom_countdown_4.mp3 */; };
+		E76848D21F4BB67D00313699 /* Ann_custom_countdown_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848C71F4BB67D00313699 /* Ann_custom_countdown_5.mp3 */; };
+		E76848D31F4BB67D00313699 /* Ann_custom_countdown_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848C81F4BB67D00313699 /* Ann_custom_countdown_6.mp3 */; };
+		E76848D41F4BB67D00313699 /* Ann_custom_countdown_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848C91F4BB67D00313699 /* Ann_custom_countdown_7.mp3 */; };
+		E76848D51F4BB67D00313699 /* Ann_custom_countdown_8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848CA1F4BB67D00313699 /* Ann_custom_countdown_8.mp3 */; };
+		E76848D61F4BB67D00313699 /* Ann_custom_countdown_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848CB1F4BB67D00313699 /* Ann_custom_countdown_9.mp3 */; };
+		E76848D71F4BB67D00313699 /* Ann_custom_countdown_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848CC1F4BB67D00313699 /* Ann_custom_countdown_10.mp3 */; };
+		E76848E31F4C0D2300313699 /* Ann_custom_timer_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848D91F4C0D2300313699 /* Ann_custom_timer_10.mp3 */; };
+		E76848E41F4C0D2300313699 /* Ann_custom_timer_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848DA1F4C0D2300313699 /* Ann_custom_timer_5.mp3 */; };
+		E76848E51F4C0D2300313699 /* Ann_custom_timer_15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848DB1F4C0D2300313699 /* Ann_custom_timer_15.mp3 */; };
+		E76848E61F4C0D2300313699 /* Ann_custom_timer_30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848DC1F4C0D2300313699 /* Ann_custom_timer_30.mp3 */; };
+		E76848E71F4C0D2300313699 /* Ann_custom_timer_120.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848DD1F4C0D2300313699 /* Ann_custom_timer_120.mp3 */; };
+		E76848E81F4C0D2300313699 /* Ann_custom_timer_180.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848DE1F4C0D2300313699 /* Ann_custom_timer_180.mp3 */; };
+		E76848E91F4C0D2300313699 /* Ann_custom_timer_240.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848DF1F4C0D2300313699 /* Ann_custom_timer_240.mp3 */; };
+		E76848EA1F4C0D2300313699 /* Ann_custom_timer_300.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848E01F4C0D2300313699 /* Ann_custom_timer_300.mp3 */; };
+		E76848EB1F4C0D2300313699 /* Ann_custom_timer_600.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848E11F4C0D2300313699 /* Ann_custom_timer_600.mp3 */; };
+		E76848EC1F4C0D2300313699 /* Ann_custom_timer_900.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E76848E21F4C0D2300313699 /* Ann_custom_timer_900.mp3 */; };
+		E76848EE1F4C1AF100313699 /* SettingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76848ED1F4C1AF100313699 /* SettingNavigationController.swift */; };
+		E76848FC1F4E5A6400313699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76848FA1F4E5A6400313699 /* Main.storyboard */; };
+		E76849061F4E638600313699 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E76849041F4E638600313699 /* Localizable.strings */; };
+		E781C9031F1EFB4C000C79F1 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781C9021F1EFB4C000C79F1 /* IntExtension.swift */; };
+		E781C90A1F2026EC000C79F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E781C9091F2026EC000C79F1 /* LaunchScreen.xib */; };
+		E7F421541F3058A7009C49FE /* AnnouncerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F421531F3058A7009C49FE /* AnnouncerTableViewController.swift */; };
+		E7F4217C1F31C04B009C49FE /* AnnouncerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4217A1F31C04B009C49FE /* AnnouncerTableViewCell.swift */; };
+		E7F4217D1F31C04B009C49FE /* AnnouncerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F4217B1F31C04B009C49FE /* AnnouncerTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		21BB36D21F1C8D9100187B83 /* TimerS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21BB36E11F1C8D9200187B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21BB36E71F1C8DA900187B83 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21BB37051F1C903400187B83 /* UserDefaultsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsModel.swift; sourceTree = "<group>"; };
+		21BB37071F1C903800187B83 /* AnnounceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnounceModel.swift; sourceTree = "<group>"; };
+		21BB370A1F1C91AE00187B83 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		21BB370C1F1C92CA00187B83 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		21BB370D1F1C92CA00187B83 /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		21BB37131F1C95E900187B83 /* AppDelegateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateExtension.swift; sourceTree = "<group>"; };
+		21BB371C1F1C98E100187B83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7058EC61F286F6A0036E3CB /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		E7058EC71F286F6A0036E3CB /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
+		E7058ECB1F2873EB0036E3CB /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		E7058ECE1F2875E90036E3CB /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		E7058ED01F2875EF0036E3CB /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		E7058ED21F29A2B20036E3CB /* LockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockTableViewController.swift; sourceTree = "<group>"; };
+		E7058ED41F29BA910036E3CB /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		E73575BB1F258B3400059265 /* TimeStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStatusModel.swift; sourceTree = "<group>"; };
+		E76848C21F4BB67D00313699 /* Ann_custom_countdown_0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_0.mp3; sourceTree = "<group>"; };
+		E76848C31F4BB67D00313699 /* Ann_custom_countdown_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_1.mp3; sourceTree = "<group>"; };
+		E76848C41F4BB67D00313699 /* Ann_custom_countdown_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_2.mp3; sourceTree = "<group>"; };
+		E76848C51F4BB67D00313699 /* Ann_custom_countdown_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_3.mp3; sourceTree = "<group>"; };
+		E76848C61F4BB67D00313699 /* Ann_custom_countdown_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_4.mp3; sourceTree = "<group>"; };
+		E76848C71F4BB67D00313699 /* Ann_custom_countdown_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_5.mp3; sourceTree = "<group>"; };
+		E76848C81F4BB67D00313699 /* Ann_custom_countdown_6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_6.mp3; sourceTree = "<group>"; };
+		E76848C91F4BB67D00313699 /* Ann_custom_countdown_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_7.mp3; sourceTree = "<group>"; };
+		E76848CA1F4BB67D00313699 /* Ann_custom_countdown_8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_8.mp3; sourceTree = "<group>"; };
+		E76848CB1F4BB67D00313699 /* Ann_custom_countdown_9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_9.mp3; sourceTree = "<group>"; };
+		E76848CC1F4BB67D00313699 /* Ann_custom_countdown_10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_countdown_10.mp3; sourceTree = "<group>"; };
+		E76848D91F4C0D2300313699 /* Ann_custom_timer_10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_timer_10.mp3; sourceTree = "<group>"; };
+		E76848DA1F4C0D2300313699 /* Ann_custom_timer_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_timer_5.mp3; sourceTree = "<group>"; };
+		E76848DB1F4C0D2300313699 /* Ann_custom_timer_15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_timer_15.mp3; sourceTree = "<group>"; };
+		E76848DC1F4C0D2300313699 /* Ann_custom_timer_30.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_timer_30.mp3; sourceTree = "<group>"; };
+		E76848DD1F4C0D2300313699 /* Ann_custom_timer_120.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_timer_120.mp3; sourceTree = "<group>"; };
+		E76848DE1F4C0D2300313699 /* Ann_custom_timer_180.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_timer_180.mp3; sourceTree = "<group>"; };
+		E76848DF1F4C0D2300313699 /* Ann_custom_timer_240.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_timer_240.mp3; sourceTree = "<group>"; };
+		E76848E01F4C0D2300313699 /* Ann_custom_timer_300.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_timer_300.mp3; sourceTree = "<group>"; };
+		E76848E11F4C0D2300313699 /* Ann_custom_timer_600.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_timer_600.mp3; sourceTree = "<group>"; };
+		E76848E21F4C0D2300313699 /* Ann_custom_timer_900.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ann_custom_timer_900.mp3; sourceTree = "<group>"; };
+		E76848ED1F4C1AF100313699 /* SettingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingNavigationController.swift; sourceTree = "<group>"; };
+		E76848FB1F4E5A6400313699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E76848FD1F4E5F2A00313699 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		E76849051F4E638600313699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E76849071F4E638F00313699 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E76849081F4E8FCA00313699 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		E76849091F4E8FCA00313699 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E781C9021F1EFB4C000C79F1 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		E781C9091F2026EC000C79F1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E7F421531F3058A7009C49FE /* AnnouncerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncerTableViewController.swift; sourceTree = "<group>"; };
+		E7F4217A1F31C04B009C49FE /* AnnouncerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncerTableViewCell.swift; sourceTree = "<group>"; };
+		E7F4217B1F31C04B009C49FE /* AnnouncerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnnouncerTableViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21BB36CF1F1C8D9100187B83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21BB36C91F1C8D9100187B83 = {
+			isa = PBXGroup;
+			children = (
+				21BB36D41F1C8D9100187B83 /* TimerS */,
+				21BB36D31F1C8D9100187B83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21BB36D31F1C8D9100187B83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21BB36D21F1C8D9100187B83 /* TimerS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21BB36D41F1C8D9100187B83 /* TimerS */ = {
+			isa = PBXGroup;
+			children = (
+				21BB36E71F1C8DA900187B83 /* AppDelegate.swift */,
+				21BB37091F1C919000187B83 /* Views */,
+				21BB36EF1F1C8F2C00187B83 /* Models */,
+				21BB36EE1F1C8F2100187B83 /* ViewControllers */,
+				21BB37121F1C958100187B83 /* Extensions */,
+				E7058ECD1F2875630036E3CB /* Protocals */,
+				21BB36E91F1C8DFB00187B83 /* Resources */,
+				21BB36E11F1C8D9200187B83 /* Info.plist */,
+				E781C9091F2026EC000C79F1 /* LaunchScreen.xib */,
+				E76848FA1F4E5A6400313699 /* Main.storyboard */,
+				E76849041F4E638600313699 /* Localizable.strings */,
+			);
+			name = TimerS;
+			path = TimeS;
+			sourceTree = "<group>";
+		};
+		21BB36E91F1C8DFB00187B83 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				21BB371C1F1C98E100187B83 /* Assets.xcassets */,
+				21BB36F01F1C8FFC00187B83 /* Audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		21BB36EE1F1C8F2100187B83 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E76848ED1F4C1AF100313699 /* SettingNavigationController.swift */,
+				21BB370D1F1C92CA00187B83 /* TimeViewController.swift */,
+				21BB370C1F1C92CA00187B83 /* SettingViewController.swift */,
+				E7058ED21F29A2B20036E3CB /* LockTableViewController.swift */,
+				E7F421531F3058A7009C49FE /* AnnouncerTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		21BB36EF1F1C8F2C00187B83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				21BB37051F1C903400187B83 /* UserDefaultsModel.swift */,
+				21BB37071F1C903800187B83 /* AnnounceModel.swift */,
+				E73575BB1F258B3400059265 /* TimeStatusModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21BB36F01F1C8FFC00187B83 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				E76848D81F4C083900313699 /* Remaining */,
+				E76848C11F4BB64600313699 /* Countdown */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		21BB37091F1C919000187B83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7F421571F3148CE009C49FE /* AnnouncerTableViewCell */,
+				E7058ECA1F286F710036E3CB /* SwitchCell */,
+				21BB370A1F1C91AE00187B83 /* TimePickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21BB37121F1C958100187B83 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21BB37131F1C95E900187B83 /* AppDelegateExtension.swift */,
+				E781C9021F1EFB4C000C79F1 /* IntExtension.swift */,
+				E7058ED41F29BA910036E3CB /* UITableViewCellExtension.swift */,
+				E7058ECB1F2873EB0036E3CB /* UITableViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E7058ECA1F286F710036E3CB /* SwitchCell */ = {
+			isa = PBXGroup;
+			children = (
+				E7058EC61F286F6A0036E3CB /* SwitchTableViewCell.swift */,
+				E7058EC71F286F6A0036E3CB /* SwitchTableViewCell.xib */,
+			);
+			path = SwitchCell;
+			sourceTree = "<group>";
+		};
+		E7058ECD1F2875630036E3CB /* Protocals */ = {
+			isa = PBXGroup;
+			children = (
+				E7058ECE1F2875E90036E3CB /* ReusableView.swift */,
+				E7058ED01F2875EF0036E3CB /* NibLoadableView.swift */,
+			);
+			path = Protocals;
+			sourceTree = "<group>";
+		};
+		E76848C11F4BB64600313699 /* Countdown */ = {
+			isa = PBXGroup;
+			children = (
+				E76848C21F4BB67D00313699 /* Ann_custom_countdown_0.mp3 */,
+				E76848C31F4BB67D00313699 /* Ann_custom_countdown_1.mp3 */,
+				E76848C41F4BB67D00313699 /* Ann_custom_countdown_2.mp3 */,
+				E76848C51F4BB67D00313699 /* Ann_custom_countdown_3.mp3 */,
+				E76848C61F4BB67D00313699 /* Ann_custom_countdown_4.mp3 */,
+				E76848C71F4BB67D00313699 /* Ann_custom_countdown_5.mp3 */,
+				E76848C81F4BB67D00313699 /* Ann_custom_countdown_6.mp3 */,
+				E76848C91F4BB67D00313699 /* Ann_custom_countdown_7.mp3 */,
+				E76848CA1F4BB67D00313699 /* Ann_custom_countdown_8.mp3 */,
+				E76848CB1F4BB67D00313699 /* Ann_custom_countdown_9.mp3 */,
+				E76848CC1F4BB67D00313699 /* Ann_custom_countdown_10.mp3 */,
+			);
+			path = Countdown;
+			sourceTree = "<group>";
+		};
+		E76848D81F4C083900313699 /* Remaining */ = {
+			isa = PBXGroup;
+			children = (
+				E76848DA1F4C0D2300313699 /* Ann_custom_timer_5.mp3 */,
+				E76848D91F4C0D2300313699 /* Ann_custom_timer_10.mp3 */,
+				E76848DB1F4C0D2300313699 /* Ann_custom_timer_15.mp3 */,
+				E76848DC1F4C0D2300313699 /* Ann_custom_timer_30.mp3 */,
+				E76848DD1F4C0D2300313699 /* Ann_custom_timer_120.mp3 */,
+				E76848DE1F4C0D2300313699 /* Ann_custom_timer_180.mp3 */,
+				E76848DF1F4C0D2300313699 /* Ann_custom_timer_240.mp3 */,
+				E76848E01F4C0D2300313699 /* Ann_custom_timer_300.mp3 */,
+				E76848E11F4C0D2300313699 /* Ann_custom_timer_600.mp3 */,
+				E76848E21F4C0D2300313699 /* Ann_custom_timer_900.mp3 */,
+			);
+			name = Remaining;
+			path = remaining;
+			sourceTree = "<group>";
+		};
+		E7F421571F3148CE009C49FE /* AnnouncerTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E7F4217A1F31C04B009C49FE /* AnnouncerTableViewCell.swift */,
+				E7F4217B1F31C04B009C49FE /* AnnouncerTableViewCell.xib */,
+			);
+			path = AnnouncerTableViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21BB36D11F1C8D9100187B83 /* TimerS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21BB36E41F1C8D9200187B83 /* Build configuration list for PBXNativeTarget "TimerS" */;
+			buildPhases = (
+				21BB36CE1F1C8D9100187B83 /* Sources */,
+				21BB36CF1F1C8D9100187B83 /* Frameworks */,
+				21BB36D01F1C8D9100187B83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimerS;
+			productName = TimeS;
+			productReference = 21BB36D21F1C8D9100187B83 /* TimerS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21BB36CA1F1C8D9100187B83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Shaobai;
+				TargetAttributes = {
+					21BB36D11F1C8D9100187B83 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 44B9AK27GM;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 21BB36CD1F1C8D9100187B83 /* Build configuration list for PBXProject "TimerS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = 21BB36C91F1C8D9100187B83;
+			productRefGroup = 21BB36D31F1C8D9100187B83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21BB36D11F1C8D9100187B83 /* TimerS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21BB36D01F1C8D9100187B83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E76848D71F4BB67D00313699 /* Ann_custom_countdown_10.mp3 in Resources */,
+				E76848D31F4BB67D00313699 /* Ann_custom_countdown_6.mp3 in Resources */,
+				E76848D01F4BB67D00313699 /* Ann_custom_countdown_3.mp3 in Resources */,
+				E76848EC1F4C0D2300313699 /* Ann_custom_timer_900.mp3 in Resources */,
+				E76849061F4E638600313699 /* Localizable.strings in Resources */,
+				E76848CF1F4BB67D00313699 /* Ann_custom_countdown_2.mp3 in Resources */,
+				E76848E31F4C0D2300313699 /* Ann_custom_timer_10.mp3 in Resources */,
+				E76848FC1F4E5A6400313699 /* Main.storyboard in Resources */,
+				E76848D21F4BB67D00313699 /* Ann_custom_countdown_5.mp3 in Resources */,
+				E76848E41F4C0D2300313699 /* Ann_custom_timer_5.mp3 in Resources */,
+				E76848EB1F4C0D2300313699 /* Ann_custom_timer_600.mp3 in Resources */,
+				E76848EA1F4C0D2300313699 /* Ann_custom_timer_300.mp3 in Resources */,
+				21BB371D1F1C98E100187B83 /* Assets.xcassets in Resources */,
+				E76848E51F4C0D2300313699 /* Ann_custom_timer_15.mp3 in Resources */,
+				E7058EC91F286F6A0036E3CB /* SwitchTableViewCell.xib in Resources */,
+				E76848D11F4BB67D00313699 /* Ann_custom_countdown_4.mp3 in Resources */,
+				E76848CE1F4BB67D00313699 /* Ann_custom_countdown_1.mp3 in Resources */,
+				E76848E71F4C0D2300313699 /* Ann_custom_timer_120.mp3 in Resources */,
+				E76848D51F4BB67D00313699 /* Ann_custom_countdown_8.mp3 in Resources */,
+				E781C90A1F2026EC000C79F1 /* LaunchScreen.xib in Resources */,
+				E76848CD1F4BB67D00313699 /* Ann_custom_countdown_0.mp3 in Resources */,
+				E76848D41F4BB67D00313699 /* Ann_custom_countdown_7.mp3 in Resources */,
+				E7F4217D1F31C04B009C49FE /* AnnouncerTableViewCell.xib in Resources */,
+				E76848E61F4C0D2300313699 /* Ann_custom_timer_30.mp3 in Resources */,
+				E76848D61F4BB67D00313699 /* Ann_custom_countdown_9.mp3 in Resources */,
+				E76848E91F4C0D2300313699 /* Ann_custom_timer_240.mp3 in Resources */,
+				E76848E81F4C0D2300313699 /* Ann_custom_timer_180.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21BB36CE1F1C8D9100187B83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21BB370F1F1C92CA00187B83 /* SettingViewController.swift in Sources */,
+				E7F421541F3058A7009C49FE /* AnnouncerTableViewController.swift in Sources */,
+				21BB37101F1C92CA00187B83 /* TimeViewController.swift in Sources */,
+				E7058ED31F29A2B20036E3CB /* LockTableViewController.swift in Sources */,
+				E7058ED51F29BA910036E3CB /* UITableViewCellExtension.swift in Sources */,
+				E7058ED11F2875EF0036E3CB /* NibLoadableView.swift in Sources */,
+				E7058EC81F286F6A0036E3CB /* SwitchTableViewCell.swift in Sources */,
+				E7058ECC1F2873EB0036E3CB /* UITableViewExtension.swift in Sources */,
+				21BB37061F1C903400187B83 /* UserDefaultsModel.swift in Sources */,
+				21BB37081F1C903800187B83 /* AnnounceModel.swift in Sources */,
+				E76848EE1F4C1AF100313699 /* SettingNavigationController.swift in Sources */,
+				E7058ECF1F2875E90036E3CB /* ReusableView.swift in Sources */,
+				E781C9031F1EFB4C000C79F1 /* IntExtension.swift in Sources */,
+				E7F4217C1F31C04B009C49FE /* AnnouncerTableViewCell.swift in Sources */,
+				21BB36E81F1C8DA900187B83 /* AppDelegate.swift in Sources */,
+				21BB37141F1C95E900187B83 /* AppDelegateExtension.swift in Sources */,
+				E73575BC1F258B3400059265 /* TimeStatusModel.swift in Sources */,
+				21BB370B1F1C91AE00187B83 /* TimePickerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E76848FA1F4E5A6400313699 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E76848FB1F4E5A6400313699 /* Base */,
+				E76848FD1F4E5F2A00313699 /* zh-Hans */,
+				E76849081F4E8FCA00313699 /* zh-Hant */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E76849041F4E638600313699 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E76849051F4E638600313699 /* Base */,
+				E76849071F4E638F00313699 /* zh-Hans */,
+				E76849091F4E8FCA00313699 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21BB36E21F1C8D9200187B83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21BB36E31F1C8D9200187B83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21BB36E51F1C8D9200187B83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44B9AK27GM;
+				INFOPLIST_FILE = "$(SRCROOT)/TimeS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Shaobai.TimerS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21BB36E61F1C8D9200187B83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44B9AK27GM;
+				INFOPLIST_FILE = "$(SRCROOT)/TimeS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Shaobai.TimerS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21BB36CD1F1C8D9100187B83 /* Build configuration list for PBXProject "TimerS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21BB36E21F1C8D9200187B83 /* Debug */,
+				21BB36E31F1C8D9200187B83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21BB36E41F1C8D9200187B83 /* Build configuration list for PBXNativeTarget "TimerS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21BB36E51F1C8D9200187B83 /* Debug */,
+				21BB36E61F1C8D9200187B83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21BB36CA1F1C8D9100187B83 /* Project object */;
+}
