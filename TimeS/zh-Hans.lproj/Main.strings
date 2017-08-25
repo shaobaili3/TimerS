@@ -57,7 +57,7 @@
 "SVA-tz-sW5.normalTitle" = "45s";
 
 /* Class = "UINavigationItem"; title = "Screen Brightness Lock"; ObjectID = "TXa-xl-m3o"; */
-"TXa-xl-m3o.title" = "屏幕亮度锁定";
+"TXa-xl-m3o.title" = "屏幕常亮";
 
 /* Class = "UILabel"; text = "Announcer"; ObjectID = "VBs-Mb-FPM"; */
 "VBs-Mb-FPM.text" = "播报员";
