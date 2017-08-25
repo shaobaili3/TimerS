@@ -47,8 +47,8 @@
 		E76848EE1F4C1AF100313699 /* SettingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76848ED1F4C1AF100313699 /* SettingNavigationController.swift */; };
 		E76848FC1F4E5A6400313699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76848FA1F4E5A6400313699 /* Main.storyboard */; };
 		E76849061F4E638600313699 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E76849041F4E638600313699 /* Localizable.strings */; };
+		E768492D1F4FCBF400313699 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E768492C1F4FCBF400313699 /* LaunchScreen.xib */; };
 		E781C9031F1EFB4C000C79F1 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781C9021F1EFB4C000C79F1 /* IntExtension.swift */; };
-		E781C90A1F2026EC000C79F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E781C9091F2026EC000C79F1 /* LaunchScreen.xib */; };
 		E7F421541F3058A7009C49FE /* AnnouncerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F421531F3058A7009C49FE /* AnnouncerTableViewController.swift */; };
 		E7F4217C1F31C04B009C49FE /* AnnouncerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4217A1F31C04B009C49FE /* AnnouncerTableViewCell.swift */; };
 		E7F4217D1F31C04B009C49FE /* AnnouncerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F4217B1F31C04B009C49FE /* AnnouncerTableViewCell.xib */; };
@@ -101,8 +101,8 @@
 		E76849071F4E638F00313699 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E76849081F4E8FCA00313699 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		E76849091F4E8FCA00313699 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E768492C1F4FCBF400313699 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		E781C9021F1EFB4C000C79F1 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
-		E781C9091F2026EC000C79F1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E7F421531F3058A7009C49FE /* AnnouncerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncerTableViewController.swift; sourceTree = "<group>"; };
 		E7F4217A1F31C04B009C49FE /* AnnouncerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncerTableViewCell.swift; sourceTree = "<group>"; };
 		E7F4217B1F31C04B009C49FE /* AnnouncerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnnouncerTableViewCell.xib; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 				E7058ECD1F2875630036E3CB /* Protocals */,
 				21BB36E91F1C8DFB00187B83 /* Resources */,
 				21BB36E11F1C8D9200187B83 /* Info.plist */,
-				E781C9091F2026EC000C79F1 /* LaunchScreen.xib */,
+				E768492C1F4FCBF400313699 /* LaunchScreen.xib */,
 				E76848FA1F4E5A6400313699 /* Main.storyboard */,
 				E76849041F4E638600313699 /* Localizable.strings */,
 			);
@@ -356,10 +356,10 @@
 				E76848E51F4C0D2300313699 /* Ann_custom_timer_15.mp3 in Resources */,
 				E7058EC91F286F6A0036E3CB /* SwitchTableViewCell.xib in Resources */,
 				E76848D11F4BB67D00313699 /* Ann_custom_countdown_4.mp3 in Resources */,
+				E768492D1F4FCBF400313699 /* LaunchScreen.xib in Resources */,
 				E76848CE1F4BB67D00313699 /* Ann_custom_countdown_1.mp3 in Resources */,
 				E76848E71F4C0D2300313699 /* Ann_custom_timer_120.mp3 in Resources */,
 				E76848D51F4BB67D00313699 /* Ann_custom_countdown_8.mp3 in Resources */,
-				E781C90A1F2026EC000C79F1 /* LaunchScreen.xib in Resources */,
 				E76848CD1F4BB67D00313699 /* Ann_custom_countdown_0.mp3 in Resources */,
 				E76848D41F4BB67D00313699 /* Ann_custom_countdown_7.mp3 in Resources */,
 				E7F4217D1F31C04B009C49FE /* AnnouncerTableViewCell.xib in Resources */,
@@ -527,7 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44B9AK27GM;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Shaobai.TimerS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -542,7 +542,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44B9AK27GM;
 				INFOPLIST_FILE = "$(SRCROOT)/TimeS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Shaobai.TimerS;
 				PRODUCT_NAME = "$(TARGET_NAME)";

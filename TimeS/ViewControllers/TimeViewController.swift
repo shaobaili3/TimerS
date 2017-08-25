@@ -268,42 +268,6 @@ class TimeViewController: UIViewController {
         selectedButton?.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: UIControlState.normal)
     }
 
-    @IBAction func lockBarButton(_ sender: UIBarButtonItem) {
-//        let lockButton = UIButton()
-//        lockButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-//        lockButton.addTarget(self, action: #selector(TimeViewController.lockBarButton(_:)), for: .touchUpInside)
-//
-//        if screenLockisOn {
-//            screenLockisOn = false
-//            lockButton.setImage(#imageLiteral(resourceName: "lock"), for: .normal)
-//            let br = UIBarButtonItem(customView: lockButton)
-//            self.navigationItem.setRightBarButton(br, animated: true)
-//        }
-//            else {
-//                screenLockisOn = true
-//                lockButton.setImage(#imageLiteral(resourceName: "unlock"), for: .normal)
-//                let br = UIBarButtonItem(customView: lockButton)
-//                self.navigationItem.setRightBarButton(br, animated: true)
-//        }
-    }
-
-    @IBAction func ButtonsTouchDown(_ sender: UIButton) {
-        //        if selectedButton != sender {
-        //            sender.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        //        }
-        //        else{
-        //            sender.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
-        //        }
-    }
-
-    @IBAction func ButtonsTouchUpOutside(_ sender: UIButton) {
-        //        if selectedButton != sender {
-        //            sender.backgroundColor = #colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)
-        //        }
-        //        else{
-        //            sender.backgroundColor = UIColor(red: 243/255, green: 156/255, blue: 18/255, alpha: 1)
-        //        }
-    }
 }
 
 extension TimeViewController: UIGestureRecognizerDelegate {
