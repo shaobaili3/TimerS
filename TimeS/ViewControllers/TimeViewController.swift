@@ -71,7 +71,6 @@ class TimeViewController: UIViewController {
 
         //Update display when defaults change
         NotificationCenter.default.addObserver(self, selector: #selector(TimeViewController.setButtonLabels), name: UserDefaults.didChangeNotification, object: nil)
-
         restoreStatus()
     }
 
@@ -168,7 +167,7 @@ class TimeViewController: UIViewController {
         }
     }
 
-    func setButtonLabels () {
+    @objc func setButtonLabels () {
         //refresh locks from userDefault
         screenLock = ScreenLock()
         
@@ -237,7 +236,7 @@ class TimeViewController: UIViewController {
         }
     }
 
-    func change() {
+    @objc func change() {
 
         if status.targetTime == -1 {
             let displayTime = Date().timeIntervalSince(status.startTime) + status.totalTime
@@ -271,7 +270,7 @@ class TimeViewController: UIViewController {
 }
 
 extension TimeViewController: UIGestureRecognizerDelegate {
-    func resetTime(sender: UITapGestureRecognizer) {
+    @objc func resetTime(sender: UITapGestureRecognizer) {
         reset()
         display.font = display.font.withSize(200)
         display.text = "--"

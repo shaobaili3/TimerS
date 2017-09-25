@@ -182,7 +182,7 @@ extension SettingViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = "\(row)"
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName: UIFont(name: "Georgia", size: 15.0)!, NSForegroundColorAttributeName: UIColor.white])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font: UIFont(name: "Georgia", size: 15.0)!, NSAttributedStringKey.foregroundColor: UIColor.white])
         return myTitle
     }
 

@@ -58,7 +58,7 @@ class LockTableViewController: UITableViewController {
         return cell
     }
     
-    func closeLock(sender: AnyObject) {
+    @objc func closeLock(sender: AnyObject) {
         screenLock?.mainLock = sender.isOn
         if sender.isOn {
             sectionNum = 2
@@ -70,7 +70,7 @@ class LockTableViewController: UITableViewController {
         }
     }
     
-    func closeLocks(sender: AnyObject) {
+    @objc func closeLocks(sender: AnyObject) {
         if sender.tag == 3 {
             screenLock?.stopwatchLock = sender.isOn
         }
