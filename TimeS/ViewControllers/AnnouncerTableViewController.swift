@@ -51,7 +51,6 @@ class AnnouncerTableViewController: UITableViewController {
                 announcer?.remaining[selectedTimer!].append(remainingTime[indexPath.row])
             }
         }
-        
         if (announcer?.remaining[selectedTimer!].isEmpty)! && (announcer?.countdown[selectedTimer!].isEmpty)! {
             announcer?.main[selectedTimer!] = false
             self.tableView.reloadData()

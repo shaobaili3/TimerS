@@ -42,8 +42,8 @@ class ScreenLock {
 
 class Announcer {
     var main: [Bool] = []
-    var remaining: [Array<Int>] = []
-    var countdown: [Array<Int>] = []
+    var remaining: [[Int]] = []
+    var countdown: [[Int]] = []
 
     init() {
         var intArray: [Int] = []
