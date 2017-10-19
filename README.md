@@ -5,7 +5,7 @@
 <p align="center">
     <a href="https://itunes.apple.com/app/id1275441372"><img src="https://img.shields.io/badge/App Store-iPhone | iPad-blue.svg"/></a>
     <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-Swift 4-<COLOR>.svg"/></a>
-    <a href="https://itunes.apple.com/app/id1275441372"><img src="https://img.shields.io/badge/platform-iOS 8.0+ -lightgrey.svg"/></a>
+    <a href="https://itunes.apple.com/app/id1275441372"><img src="https://img.shields.io/badge/platform-iOS 9.0+ -lightgrey.svg"/></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"/></a>
     <a href="README.zh-cn.md"><img src="https://img.shields.io/badge/中文-README-orange.svg"/></a>
 </p>
@@ -13,7 +13,7 @@
 
 This project is written by **Swift 4.0** and requires **Xcode 9+**.
 
-* Open the TimerS workspace in Xcode 9+
+* Open the **TimerS.xcodeproj** in Xcode 9+
 * Build and run
 
 ## Feature

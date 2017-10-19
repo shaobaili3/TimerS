@@ -5,16 +5,16 @@
 <p align="center">
     <a href="https://itunes.apple.com/app/id1275441372"><img src="https://img.shields.io/badge/App Store-iPhone | iPad-blue.svg"/></a>
     <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-Swift 4-<COLOR>.svg"/></a>
-    <a href="https://itunes.apple.com/app/id1275441372"><img src="https://img.shields.io/badge/platform-iOS 8.0+ -lightgrey.svg"/></a>
+    <a href="https://itunes.apple.com/app/id1275441372"><img src="https://img.shields.io/badge/platform-iOS 9.0+ -lightgrey.svg"/></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"/></a>
-    <a href="README.zh-cn.md"><img src="https://img.shields.io/badge/中文-README-orange.svg"/></a>
+    <a href="README.md"><img src="https://img.shields.io/badge/English-README-orange.svg"/></a>
 </p>
 
 ## 开始使用
 
-该工程由**Swift 4.0**和**Xcode 9+**编写.
+该工程由**Swift 4.0** 和**Xcode 9+** 编写.
 
-* 使用Xcode 9+打开TimerS.xcodeproj
+* 使用Xcode 9+ 打开**TimerS.xcodeproj**
 * 运行
 
 ## 特征
