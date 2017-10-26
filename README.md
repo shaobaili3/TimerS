@@ -14,24 +14,24 @@
 
 This project is written by **Swift 4.0** and requires **Xcode 9+**.
 
-* Open the **TimerS.xcodeproj** in Xcode 9+
-* Build and run
+1. Open the **TimerS.xcodeproj** in Xcode 9+
+1. Build and run
 
 ## Feature
 
-#### Run Background
+* Run Background
 
-TimerS does not have background process. If you terminate the process or even shutdown the device, Timers still counts time correctly. TimerS records users' operations in **UserDefaults**, it compares the current time and start time to calculate displayed time when you are using.
+>TimerS does not have background process. If you terminate the process or even shutdown the device, Timers still counts time correctly. TimerS records users' operations in **UserDefaults**, it compares the current time and start time to calculate displayed time when you are using.
 
 ![iPhoneX](Preview/userDefault.gif)
 
-#### Customed UIPickView
+* Customed UIPickView
 
 Customed UIPickerView displays hours, minutes and seconds. When set timer to 0:
 
 ![iPhoneX2](Preview/pickerView.gif)
 
-#### Autolayout & Universal
+* Autolayout & Universal
 
 Build interface by AutoLayout and Storyboard. Support universal devices and split view on iPad:
 
