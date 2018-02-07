@@ -14,7 +14,7 @@ class SettingViewController: UIViewController {
         var time: Int = 0
         var vibrate: Bool?
         var sound: String?
-        var announce: [String] = []
+        var announce = [String]()
         var setting: UserDefaults
     }
     
@@ -36,7 +36,7 @@ class SettingViewController: UIViewController {
     var t3Time: Int = 0
     var selectedTimerButton: UIButton!
     var timerKeys: [String] = ["t1", "t2", "t3"]
-    var timers: [Timer] = []
+    var timers = [Timer]()
     var selectedTimer: Int = 0
     var selectedButton: UIButton?
     
@@ -107,7 +107,7 @@ class SettingViewController: UIViewController {
             let time = setting?.integer(forKey: "time")
             let vibrate = setting?.bool(forKey: "vibrate")
             let sound = setting?.string(forKey: "sound")
-            let announce: [String] = []
+            let announce = [String]()
             let oneTimer: Timer = Timer(name: timerKey, time: time!, vibrate: vibrate, sound: sound, announce: announce, setting: setting!)
             timers.append(oneTimer)
         }
@@ -211,4 +211,7 @@ extension SettingViewController: UIPickerViewDelegate {
         timePickView.selectRow(minutes, inComponent: 1, animated: true)
         timePickView.selectRow(seconds, inComponent: 2, animated: true)
     }
+    
+    
+  
 }

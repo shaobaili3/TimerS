@@ -10,7 +10,7 @@ import UIKit
 
 class LockTableViewController: UITableViewController {
     var screenLock: ScreenLock? // get this by segue in SettingViewController
-    var sectionNum: Int = 2
+    var sectionNum = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()

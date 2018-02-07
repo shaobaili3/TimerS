@@ -41,12 +41,12 @@ class ScreenLock {
 }
 
 class Announcer {
-    var main: [Bool] = []
-    var remaining: [[Int]] = []
-    var countdown: [[Int]] = []
+    var main = [Bool]()
+    var remaining = [[Int]]()
+    var countdown = [[Int]]()
 
     init() {
-        var intArray: [Int] = []
+        var intArray = [Int]()
         for index in 0...2 {
             //load main switchers
             main.append(UserDefaults(suiteName: timersName[index])?.bool(forKey: announceKey) ?? true)
