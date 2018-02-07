@@ -41,7 +41,7 @@ class TimeViewController: UIViewController {
     @IBOutlet weak var t1Button: UIButton!
     @IBOutlet weak var t2Button: UIButton!
     @IBOutlet weak var t3Button: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonLabels()
@@ -66,8 +66,11 @@ class TimeViewController: UIViewController {
         self.navigationItem.titleView?.addGestureRecognizer(tapTitle)
 
         //Default MainLabel
-        display.font = display.font.withSize(200)
-        display.text = "--"
+        display.font = display.font.withSize(1000)
+        display.text = ""
+        display.minimumScaleFactor = 0.01
+        display.adjustsFontSizeToFitWidth = true
+
 
         //Update display when defaults change
         NotificationCenter.default.addObserver(self, selector: #selector(TimeViewController.setButtonLabels), name: UserDefaults.didChangeNotification, object: nil)
@@ -134,8 +137,6 @@ class TimeViewController: UIViewController {
             print("timer buttons tag invalid ")
             break
         }
-
-        //display.font = display.font.withSize(200)
         sender.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         status.startTime = Date()
         covertTimeInterval(interval: Double(status.targetTime))
@@ -170,10 +171,10 @@ class TimeViewController: UIViewController {
     @objc func setButtonLabels () {
         //refresh locks from userDefault
         screenLock = ScreenLock()
-        
+
         //refresh annoucners from userDefault
         sound = AnnounceModel()
-        
+
         t1Button.setTitle(t1settings?.integer(forKey: "time").covertTotalToTimer(), for: .normal)
         t2Button.setTitle(t2settings?.integer(forKey: "time").covertTotalToTimer(), for: .normal)
         t3Button.setTitle(t3settings?.integer(forKey: "time").covertTotalToTimer(), for: .normal)
@@ -195,42 +196,32 @@ class TimeViewController: UIViewController {
 
             let msec = interval.truncatingRemainder(dividingBy: 1)
             if hours != 0 {
-                display.font = display.font.withSize(60)
                 display.text = String(hours) + ":" + String(format: "%.2d", minutes) + ":" + String(format: "%.2d", seconds) + "." + String(format: "%.2d", Int(msec * 100))
             }
                 else {
-                    display.font = display.font.withSize(80)
                     display.text = String(format: "%.2d", minutes) + ":" + String(format: "%.2d", seconds) + "." + String(format: "%.2d", Int(msec * 100))
             }
             return
         }
 
         //fomat mainLabel for timer mode
-        
+
         if screenLock.mainLock {
             screenLockisOn = screenLock.timerLocks[status.timerTag - 1]
         } else {
             screenLockisOn = false
         }
-        
+
         if hours != 0 {
-            display.font = display.font.withSize(81)
             display.text = String(hours) + ":" + String(format: "%.2d", minutes) + ":" + String(format: "%.2d", seconds)
         }
             else if minutes != 0 {
-                if minutes < 10 {
-                    display.font = display.font.withSize(160)
-                }
-                    else {
-                        display.font = display.font.withSize(125)
-                }
                 display.text = String(minutes) + ":" + String(format: "%.2d", seconds)
         }
             else {
-                display.font = display.font.withSize(200)
                 display.text = String(seconds)
         }
-        
+
         if status.stopWatchIsOn == false && status.totalTime == 0 {
             sound.playSound(displayTime: Int(interval))
         }
@@ -272,8 +263,7 @@ class TimeViewController: UIViewController {
 extension TimeViewController: UIGestureRecognizerDelegate {
     @objc func resetTime(sender: UITapGestureRecognizer) {
         reset()
-        display.font = display.font.withSize(200)
-        display.text = "--"
+        display.text = ""
         timeBackground.backgroundColor = UIColor(red: 30 / 255, green: 30 / 255, blue: 30 / 255, alpha: 1)
         resetSelectedButtonBackground()
 
@@ -285,7 +275,7 @@ extension TimeViewController: UIGestureRecognizerDelegate {
         status.totalTime = 0
         status.targetTime = -1
         btimer?.invalidate()
-        
+
         sound = AnnounceModel()
     }
 }

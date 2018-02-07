@@ -166,8 +166,8 @@
 		21BB36EE1F1C8F2100187B83 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E76848ED1F4C1AF100313699 /* SettingNavigationController.swift */,
 				21BB370D1F1C92CA00187B83 /* TimeViewController.swift */,
+				E76848ED1F4C1AF100313699 /* SettingNavigationController.swift */,
 				21BB370C1F1C92CA00187B83 /* SettingViewController.swift */,
 				E7058ED21F29A2B20036E3CB /* LockTableViewController.swift */,
 				E7F421531F3058A7009C49FE /* AnnouncerTableViewController.swift */,
