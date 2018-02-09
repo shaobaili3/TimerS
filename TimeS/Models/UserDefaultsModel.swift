@@ -27,7 +27,6 @@ class ScreenLock {
         for index in 0...2 {
             timerLocks.append((UserDefaults(suiteName: timersName[index])?.bool(forKey: lock)) ?? true)
         }
-
         stopwatchLock = UserDefaults.standard.bool(forKey: slock)
     }
 

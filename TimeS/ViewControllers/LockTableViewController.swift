@@ -11,31 +11,31 @@ import UIKit
 class LockTableViewController: UITableViewController {
     var screenLock: ScreenLock? // get this by segue in SettingViewController
     var sectionNum = 2
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(class: SwitchTableViewCell.self)
     }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         guard let lock = screenLock else {
             fatalError("screenLock doesnot not exist, please chcek segue")
         }
-        
+
         if lock.mainLock {
             return sectionNum
         }
-        
+
         return 1
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let lock = screenLock else {
             fatalError("screenLock doesnot not exist, please chcek segue")
         }
-        
+
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SwitchTableViewCell
-        
+
         if indexPath.section == 0 {
             let textScreenBrightnessLock = NSLocalizedString("Screen Brightness Lock", comment: "")
             cell.configure(labelText: textScreenBrightnessLock, switchStatus: lock.mainLock)
@@ -57,7 +57,7 @@ class LockTableViewController: UITableViewController {
         }
         return cell
     }
-    
+
     @objc func closeLock(sender: AnyObject) {
         screenLock?.mainLock = sender.isOn
         if sender.isOn {
@@ -69,13 +69,13 @@ class LockTableViewController: UITableViewController {
             tableView.deleteSections(indexSet, with: .fade)
         }
     }
-    
+
     @objc func closeLocks(sender: AnyObject) {
         if sender.tag == 3 {
             screenLock?.stopwatchLock = sender.isOn
         }
-        else {
-            screenLock?.timerLocks[sender.tag] = sender.isOn
+            else {
+                screenLock?.timerLocks[sender.tag] = sender.isOn
         }
     }
 }
