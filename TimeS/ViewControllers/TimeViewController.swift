@@ -20,11 +20,7 @@ class TimeViewController: UIViewController {
     var screenLock = ScreenLock()
     var screenLockisOn: Bool = true {
         didSet {
-            if screenLockisOn {
-                UIApplication.shared.isIdleTimerDisabled = true
-            } else {
-                UIApplication.shared.isIdleTimerDisabled = false
-            }
+            UIApplication.shared.isIdleTimerDisabled = screenLockisOn
         }
     }
 
@@ -41,7 +37,7 @@ class TimeViewController: UIViewController {
     @IBOutlet weak var t1Button: UIButton!
     @IBOutlet weak var t2Button: UIButton!
     @IBOutlet weak var t3Button: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonLabels()
@@ -98,17 +94,17 @@ class TimeViewController: UIViewController {
                 timeBackground.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
                 StopWatchButton.setTitle(textStop, for: UIControlState.normal)
             }
-                else {
-                    timeBackground.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-                    let displayTime = status.totalTime
-                    covertTimeInterval(interval: TimeInterval(displayTime))
+            else {
+                timeBackground.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+                let displayTime = status.totalTime
+                covertTimeInterval(interval: TimeInterval(displayTime))
             }
         }
-            else if status.stopWatchIsOn {
-                StopWatchButton.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-                btimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(TimeViewController.change), userInfo: nil, repeats: true)
-                timeBackground.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-                StopWatchButton.setTitle(textStop, for: UIControlState.normal)
+        else if status.stopWatchIsOn {
+            StopWatchButton.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+            btimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(TimeViewController.change), userInfo: nil, repeats: true)
+            timeBackground.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+            StopWatchButton.setTitle(textStop, for: UIControlState.normal)
         }
         //reset mode
         return
@@ -159,22 +155,22 @@ class TimeViewController: UIViewController {
             let textStop = NSLocalizedString("Stop", comment: "")
             sender.setTitle(textStop, for: UIControlState.normal)
         }
-            else {
-                status.stopWatchIsOn = false
-                let textStart = NSLocalizedString("Start", comment: "")
-                sender.setTitle(textStart, for: UIControlState.normal)
-                sender.backgroundColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
-                status.totalTime += Date().timeIntervalSince(status.startTime)
+        else {
+            status.stopWatchIsOn = false
+            let textStart = NSLocalizedString("Start", comment: "")
+            sender.setTitle(textStart, for: UIControlState.normal)
+            sender.backgroundColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+            status.totalTime += Date().timeIntervalSince(status.startTime)
         }
     }
 
-    func setButtonLabels () {
+    @objc func setButtonLabels () {
         //refresh locks from userDefault
         screenLock = ScreenLock()
-        
+
         //refresh annoucners from userDefault
         sound = AnnounceModel()
-        
+
         t1Button.setTitle(t1settings?.integer(forKey: "time").covertTotalToTimer(), for: .normal)
         t2Button.setTitle(t2settings?.integer(forKey: "time").covertTotalToTimer(), for: .normal)
         t3Button.setTitle(t3settings?.integer(forKey: "time").covertTotalToTimer(), for: .normal)
@@ -199,62 +195,62 @@ class TimeViewController: UIViewController {
                 display.font = display.font.withSize(60)
                 display.text = String(hours) + ":" + String(format: "%.2d", minutes) + ":" + String(format: "%.2d", seconds) + "." + String(format: "%.2d", Int(msec * 100))
             }
-                else {
-                    display.font = display.font.withSize(80)
-                    display.text = String(format: "%.2d", minutes) + ":" + String(format: "%.2d", seconds) + "." + String(format: "%.2d", Int(msec * 100))
+            else {
+                display.font = display.font.withSize(80)
+                display.text = String(format: "%.2d", minutes) + ":" + String(format: "%.2d", seconds) + "." + String(format: "%.2d", Int(msec * 100))
             }
             return
         }
 
         //fomat mainLabel for timer mode
-        
+
         if screenLock.mainLock {
             screenLockisOn = screenLock.timerLocks[status.timerTag - 1]
         } else {
             screenLockisOn = false
         }
-        
+
         if hours != 0 {
             display.font = display.font.withSize(81)
             display.text = String(hours) + ":" + String(format: "%.2d", minutes) + ":" + String(format: "%.2d", seconds)
         }
-            else if minutes != 0 {
-                if minutes < 10 {
-                    display.font = display.font.withSize(160)
-                }
-                    else {
-                        display.font = display.font.withSize(125)
-                }
-                display.text = String(minutes) + ":" + String(format: "%.2d", seconds)
-        }
+        else if minutes != 0 {
+            if minutes < 10 {
+                display.font = display.font.withSize(160)
+            }
             else {
-                display.font = display.font.withSize(200)
-                display.text = String(seconds)
+                display.font = display.font.withSize(125)
+            }
+            display.text = String(minutes) + ":" + String(format: "%.2d", seconds)
         }
-        
+        else {
+            display.font = display.font.withSize(200)
+            display.text = String(seconds)
+        }
+
         if status.stopWatchIsOn == false && status.totalTime == 0 {
             sound.playSound(displayTime: Int(interval))
         }
     }
 
-    func change() {
+    @objc func change() {
 
         if status.targetTime == -1 {
             let displayTime = Date().timeIntervalSince(status.startTime) + status.totalTime
             //display.text = String(format: "%.2f", displayTime)
             covertTimeInterval(interval: TimeInterval(displayTime))
         }
-            else {
-                display.textColor = UIColor.white
-                let intervalTime = status.startTime.timeIntervalSinceNow
-                let displayTime = Int(intervalTime) + status.targetTime
-                covertTimeInterval(interval: TimeInterval(displayTime))
+        else {
+            display.textColor = UIColor.white
+            let intervalTime = status.startTime.timeIntervalSinceNow
+            let displayTime = Int(intervalTime) + status.targetTime
+            covertTimeInterval(interval: TimeInterval(displayTime))
 
-                if displayTime < 1 {
-                    timeBackground.backgroundColor = UIColor(red: 39 / 255, green: 174 / 255, blue: 96 / 255, alpha: 1)
-                    selectedButton?.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-                    selectedButton?.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: UIControlState.normal)
-                }
+            if displayTime < 1 {
+                timeBackground.backgroundColor = UIColor(red: 39 / 255, green: 174 / 255, blue: 96 / 255, alpha: 1)
+                selectedButton?.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+                selectedButton?.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: UIControlState.normal)
+            }
         }
     }
 
@@ -307,7 +303,7 @@ class TimeViewController: UIViewController {
 }
 
 extension TimeViewController: UIGestureRecognizerDelegate {
-    func resetTime(sender: UITapGestureRecognizer) {
+    @objc func resetTime(sender: UITapGestureRecognizer) {
         reset()
         display.font = display.font.withSize(200)
         display.text = "--"
@@ -322,7 +318,7 @@ extension TimeViewController: UIGestureRecognizerDelegate {
         status.totalTime = 0
         status.targetTime = -1
         btimer?.invalidate()
-        
+
         sound = AnnounceModel()
     }
 }
