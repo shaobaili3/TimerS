@@ -10,9 +10,6 @@ import UIKit
 
 extension Int {
     func covertTotalToTimer() -> String {
-        //let textH = NSLocalizedString("h", comment: "")
-        //let textS = NSLocalizedString("s", comment: "")
-        
         var text: String
         let seconds = self % 60
         let minutes = (self / 60) % 60

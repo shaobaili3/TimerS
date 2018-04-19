@@ -8,8 +8,8 @@
 
 import UIKit
 
-class TimeStatusModel {
-    
+final class TimeStatusModel {
+
     var targetTime: Int {
         get {
             return UserDefaults.standard.integer(forKey: "targetTime")

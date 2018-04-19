@@ -43,18 +43,23 @@ class LockTableViewController: UITableViewController {
         } else if indexPath.section == 1 {
             let textTimer = NSLocalizedString("Timer", comment: "")
             let textStopwatch = NSLocalizedString("Stopwatch", comment: "")
-            if indexPath.row == 0 {
+
+            switch indexPath.row {
+            case 0:
                 cell.configure(labelText: textTimer + " 1", switchStatus: lock.timerLocks[0])
-            } else if indexPath.row == 1 {
+            case 1:
                 cell.configure(labelText: textTimer + " 2", switchStatus: lock.timerLocks[1])
-            } else if indexPath.row == 2 {
+            case 2:
                 cell.configure(labelText: textTimer + " 3", switchStatus: lock.timerLocks[2])
-            } else if indexPath.row == 3 {
+            case 3:
                 cell.configure(labelText: textStopwatch, switchStatus: lock.stopwatchLock)
+            default:
+                break
             }
             cell.uiSwitch.tag = indexPath.row
             cell.uiSwitch.addTarget(self, action: #selector(closeLocks), for: .valueChanged)
         }
+        
         return cell
     }
 
@@ -74,8 +79,8 @@ class LockTableViewController: UITableViewController {
         if sender.tag == 3 {
             screenLock?.stopwatchLock = sender.isOn
         }
-            else {
-                screenLock?.timerLocks[sender.tag] = sender.isOn
+        else {
+            screenLock?.timerLocks[sender.tag] = sender.isOn
         }
     }
 }

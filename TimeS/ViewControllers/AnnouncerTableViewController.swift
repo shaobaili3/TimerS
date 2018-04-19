@@ -12,8 +12,8 @@ class AnnouncerTableViewController: UITableViewController {
 
     var announcer: Announcer?
     var selectedTimer: Int?
-    var countdown: [String] = ["Overtime", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]
-    var remaining: [Int: String] = [5: "Five seconds remaining", 10: "Ten seonds remaining", 15: "Fifteen sconds remaining", 30: "Thirty sconds remaining", 120: "Two minutes remaining", 180: "Three minutes remaining", 240: "Four minutes remaining", 300: "Five minutes remaining", 600: "Ten minutes remaining", 900: "Fifteen minutes remaining"]
+    let countdown: [String] = ["Overtime", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]
+    let remaining: [Int: String] = [5: "Five seconds remaining", 10: "Ten seonds remaining", 15: "Fifteen sconds remaining", 30: "Thirty sconds remaining", 120: "Two minutes remaining", 180: "Three minutes remaining", 240: "Four minutes remaining", 300: "Five minutes remaining", 600: "Ten minutes remaining", 900: "Fifteen minutes remaining"]
     var remainingTime = [Int]()
     var numOfSection = 3
 
@@ -21,7 +21,7 @@ class AnnouncerTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.register(class: SwitchTableViewCell.self)
         tableView.register(class: AnnouncerTableViewCell.self)
-        
+
         remainingTime = Array(remaining.keys)
         remainingTime.sort { $0 < $1 } // = list.sort(sort: <)
     }
@@ -68,16 +68,16 @@ class AnnouncerTableViewController: UITableViewController {
             cell.configure(labelText: textAnnouncer, switchStatus: (announcer?.main[selectedTimer!])!)
             return cell
         } else if indexPath.section == 3 {
-                let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as AnnouncerTableViewCell
-                cell.textLabel?.text = "Reset to Default"
-                cell.textLabel?.textAlignment = .center
-                cell.textLabel?.textColor = #colorLiteral(red: 1, green: 0.4579983354, blue: 0, alpha: 1)
-                cell.accessoryType = .none
-                return cell
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as AnnouncerTableViewCell
+            cell.textLabel?.text = "Reset to Default"
+            cell.textLabel?.textAlignment = .center
+            cell.textLabel?.textColor = #colorLiteral(red: 1, green: 0.4579983354, blue: 0, alpha: 1)
+            cell.accessoryType = .none
+            return cell
         }
-        
+
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as AnnouncerTableViewCell
-        
+
         if indexPath.section == 2 {
             let currentRemaining = remainingTime[indexPath.row]
             cell.textLabel?.text = remaining[currentRemaining]
@@ -103,7 +103,7 @@ class AnnouncerTableViewController: UITableViewController {
     @objc func closeAnnouncer(sender: AnyObject) {
         if sender.isOn {
             announcer?.main[selectedTimer!] = true
-            announcer?.countdown[selectedTimer!] = [0,1,2,3,4,5,6,7,8,9,10]
+            announcer?.countdown[selectedTimer!] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
             announcer?.remaining[selectedTimer!] = remainingTime
         } else {
             announcer?.main[selectedTimer!] = false

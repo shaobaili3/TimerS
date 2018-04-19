@@ -8,7 +8,7 @@
 import AVFoundation
 import UIKit
 
-class AnnounceModel {
+final class AnnounceModel {
     var announcer = Announcer()
     var soundEffect: AVAudioPlayer?
     var displayTime: Int?

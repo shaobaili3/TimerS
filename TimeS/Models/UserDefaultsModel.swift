@@ -7,17 +7,18 @@
 //
 
 import UIKit
-let timersName: [String] = ["t1", "t2", "t3"]
-let timeKey = "time"
-let announceKey = "announcer"
-let remainingKey = "remainingKey"
-let countdownKey = "countdown"
-let lock = "ScreenLock"
-let slock = "stopwatchLock"
-let def = "defaultSetting"
+
+fileprivate let timersName: [String] = ["t1", "t2", "t3"]
+fileprivate let timeKey = "time"
+fileprivate let announceKey = "announcer"
+fileprivate let remainingKey = "remainingKey"
+fileprivate let countdownKey = "countdown"
+fileprivate let lock = "ScreenLock"
+fileprivate let slock = "stopwatchLock"
+fileprivate let def = "defaultSetting"
 
 
-class ScreenLock {
+final class ScreenLock {
     var mainLock: Bool
     var timerLocks = [Bool]()
     var stopwatchLock: Bool

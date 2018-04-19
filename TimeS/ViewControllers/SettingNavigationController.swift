@@ -20,7 +20,7 @@ class SettingNavigationController: UINavigationController {
         }
         return.portrait
     }
-    
+
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
             return super.preferredInterfaceOrientationForPresentation

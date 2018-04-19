@@ -11,32 +11,31 @@ import AVFoundation
 
 class TimeViewController: UIViewController {
 
+    @IBOutlet var timeBackground: UIView!
+    @IBOutlet weak var StopWatchButton: UIButton!
+    @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet var resetLabel: UILabel!
+    @IBOutlet weak var t1Button: UIButton!
+    @IBOutlet weak var t2Button: UIButton!
+    @IBOutlet weak var t3Button: UIButton!
+
     var sound = AnnounceModel()
     let userDefault = UserDefaultsModel()
     let status = TimeStatusModel()
-
     var btimer: Timer?
     var selectedButton: UIButton?
     var screenLock = ScreenLock()
+    var t1settings = UserDefaults(suiteName: "t1")
+    var t2settings = UserDefaults(suiteName: "t2")
+    var t3settings = UserDefaults(suiteName: "t3")
+
     var screenLockisOn: Bool = true {
         didSet {
             UIApplication.shared.isIdleTimerDisabled = screenLockisOn
         }
     }
 
-    var t1settings = UserDefaults(suiteName: "t1")
-    var t2settings = UserDefaults(suiteName: "t2")
-    var t3settings = UserDefaults(suiteName: "t3")
-
-    @IBOutlet var timeBackground: UIView!
-    @IBOutlet weak var StopWatchButton: UIButton!
-    @IBOutlet weak var display: UILabel!
-    @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet var resetLabel: UILabel!
-
-    @IBOutlet weak var t1Button: UIButton!
-    @IBOutlet weak var t2Button: UIButton!
-    @IBOutlet weak var t3Button: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +61,11 @@ class TimeViewController: UIViewController {
         self.navigationItem.titleView?.addGestureRecognizer(tapTitle)
 
         //Default MainLabel
-        display.font = display.font.withSize(1000)
+        display.font = display.font.withSize(500)
         display.text = ""
         display.minimumScaleFactor = 0.01
         display.adjustsFontSizeToFitWidth = true
+        display.sizeToFit()
 
 
         //Update display when defaults change
@@ -146,7 +146,7 @@ class TimeViewController: UIViewController {
         status.targetTime = -1
         btimer?.invalidate()
         resetSelectedButtonBackground()
-        if status.stopWatchIsOn == false {
+        if !status.stopWatchIsOn {
             sender.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
             status.stopWatchIsOn = true
             status.startTime = Date()
@@ -177,18 +177,19 @@ class TimeViewController: UIViewController {
     }
 
     func covertTimeInterval(interval: TimeInterval) {
+        display.font = display.font.withSize(500)
+        display.minimumScaleFactor = 0.01
+        display.adjustsFontSizeToFitWidth = true
+        
         let ti = abs(Int(interval))
         let seconds = ti % 60
         let minutes = (ti / 60) % 60
         let hours = (ti / 3600)
 
-        if status.targetTime == -1 { //format mainLabel for Stopwatch mode
+        if status.targetTime == -1 {
 
-            if screenLock.mainLock {
-                screenLockisOn = screenLock.stopwatchLock
-            } else {
-                screenLockisOn = false
-            }
+            //format mainLabel for Stopwatch mode
+            screenLockisOn = screenLock.mainLock ? screenLock.stopwatchLock : false
 
             let msec = interval.truncatingRemainder(dividingBy: 1)
             if hours != 0 {
@@ -200,12 +201,7 @@ class TimeViewController: UIViewController {
         }
 
         //fomat mainLabel for timer mode
-
-        if screenLock.mainLock {
-            screenLockisOn = screenLock.timerLocks[status.timerTag - 1]
-        } else {
-            screenLockisOn = false
-        }
+        screenLockisOn = screenLock.mainLock ? screenLock.timerLocks[status.timerTag - 1] : false
 
         if hours != 0 {
             display.text = String(hours) + ":" + String(format: "%.2d", minutes) + ":" + String(format: "%.2d", seconds)
@@ -214,9 +210,11 @@ class TimeViewController: UIViewController {
         }
         else {
             display.text = String(seconds)
+            display.font = display.font.withSize(display.font.pointSize * 0.55)
+
         }
 
-        if status.stopWatchIsOn == false && status.totalTime == 0 {
+        if !status.stopWatchIsOn, status.totalTime == 0 {
             sound.playSound(displayTime: Int(interval))
         }
     }
@@ -225,7 +223,6 @@ class TimeViewController: UIViewController {
 
         if status.targetTime == -1 {
             let displayTime = Date().timeIntervalSince(status.startTime) + status.totalTime
-            //display.text = String(format: "%.2f", displayTime)
             covertTimeInterval(interval: TimeInterval(displayTime))
         }
         else {
@@ -269,7 +266,6 @@ extension TimeViewController: UIGestureRecognizerDelegate {
         status.totalTime = 0
         status.targetTime = -1
         btimer?.invalidate()
-
         sound = AnnounceModel()
     }
 }
