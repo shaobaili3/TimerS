@@ -99,7 +99,6 @@ class AnnouncerTableViewController: UITableViewController {
         return cell
     }
 
-
     @objc func closeAnnouncer(sender: AnyObject) {
         if sender.isOn {
             announcer?.main[selectedTimer!] = true

@@ -12,7 +12,7 @@ class SwitchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var uiSwitch: UISwitch!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,7 +23,7 @@ class SwitchTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func configure(labelText: String, switchStatus: Bool) {
         label.text = labelText
         uiSwitch.isOn = switchStatus

@@ -75,5 +75,3 @@ final class AnnounceModel {
         }
     }
 }
-
-

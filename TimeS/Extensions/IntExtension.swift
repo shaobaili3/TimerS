@@ -20,11 +20,9 @@ extension Int {
             if minutes != 0 && seconds != 0 {
                 text += "+"
             }
-        }
-        else if minutes != 0 {
+        } else if minutes != 0 {
             text = String(minutes) + ":" + String(format: "%.2d", seconds)
-        }
-        else {
+        } else {
             text = String(seconds) + "s"
         }
 

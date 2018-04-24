@@ -1,11 +1,11 @@
 import UIKit
 
 class TimePickerView: UIPickerView, UIPickerViewDataSource {
-    
+
     enum ComponentType: Int {
-        case Hours = 0
-        case Minutes = 1
-        case Seconds = 2
+        case hours = 0
+        case minutes = 1
+        case seconds = 2
     }
 
     private let hoursInDay = 24
@@ -16,11 +16,11 @@ class TimePickerView: UIPickerView, UIPickerViewDataSource {
     private var hoursLabel: UILabel!
     private var minutesLabel: UILabel!
     private var secondsLabel: UILabel!
-    
+
     var hours: Int = 0
     var minutes: Int = 0
     var seconds: Int = 0
-    
+
     var totalTimeInSeconds: Int {
         return hours * self.secondsInHour + minutes * self.secondsInMinute + seconds
     }
@@ -33,11 +33,11 @@ class TimePickerView: UIPickerView, UIPickerViewDataSource {
     func setup() {
         self.setValue(UIColor.white, forKey: "textColor")
         self.setValue(UIColor.white, forKey: "textColor")
-        
+
         let textHours = NSLocalizedString("hours", comment: "")
         let textSec = NSLocalizedString("sec", comment: "")
         let textMin = NSLocalizedString("min", comment: "")
-        
+
         hoursLabel = UILabel()
         hoursLabel.text = textHours
         hoursLabel.textColor = UIColor.white
@@ -69,11 +69,11 @@ class TimePickerView: UIPickerView, UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch component {
-        case ComponentType.Hours.rawValue:
+        case ComponentType.hours.rawValue:
             return self.hoursInDay
-        case ComponentType.Minutes.rawValue:
+        case ComponentType.minutes.rawValue:
             return self.minutesInHour
-        case ComponentType.Seconds.rawValue:
+        case ComponentType.seconds.rawValue:
             return self.secondsInMinute
         default:
             fatalError("Invalid component in pickerView")
@@ -90,15 +90,15 @@ class TimePickerView: UIPickerView, UIPickerViewDataSource {
 
     func timeChanged(row: Int, component: Int) {
         switch component {
-        case ComponentType.Hours.rawValue:
+        case ComponentType.hours.rawValue:
             hours = row
-        case ComponentType.Minutes.rawValue:
+        case ComponentType.minutes.rawValue:
             minutes = row
-        case ComponentType.Seconds.rawValue:
+        case ComponentType.seconds.rawValue:
             seconds = row
         default:
             fatalError("no component with number \(component)")
         }
     }
-    
+
 }

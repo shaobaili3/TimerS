@@ -7,5 +7,5 @@
 //
 import UIKit
 
-extension UITableViewCell: ReusableView, NibLoadableView{
+extension UITableViewCell: ReusableView, NibLoadableView {
 }

@@ -59,7 +59,7 @@ class LockTableViewController: UITableViewController {
             cell.uiSwitch.tag = indexPath.row
             cell.uiSwitch.addTarget(self, action: #selector(closeLocks), for: .valueChanged)
         }
-        
+
         return cell
     }
 
@@ -78,8 +78,7 @@ class LockTableViewController: UITableViewController {
     @objc func closeLocks(sender: AnyObject) {
         if sender.tag == 3 {
             screenLock?.stopwatchLock = sender.isOn
-        }
-        else {
+        } else {
             screenLock?.timerLocks[sender.tag] = sender.isOn
         }
     }

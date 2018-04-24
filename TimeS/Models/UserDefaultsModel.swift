@@ -8,15 +8,14 @@
 
 import UIKit
 
-fileprivate let timersName: [String] = ["t1", "t2", "t3"]
-fileprivate let timeKey = "time"
-fileprivate let announceKey = "announcer"
-fileprivate let remainingKey = "remainingKey"
-fileprivate let countdownKey = "countdown"
-fileprivate let lock = "ScreenLock"
-fileprivate let slock = "stopwatchLock"
-fileprivate let def = "defaultSetting"
-
+private let timersName: [String] = ["t1", "t2", "t3"]
+private let timeKey = "time"
+private let announceKey = "announcer"
+private let remainingKey = "remainingKey"
+private let countdownKey = "countdown"
+private let lock = "ScreenLock"
+private let slock = "stopwatchLock"
+private let def = "defaultSetting"
 
 final class ScreenLock {
     var mainLock: Bool
@@ -50,11 +49,9 @@ class Announcer {
         for index in 0...2 {
             //load main switchers
             main.append(UserDefaults(suiteName: timersName[index])?.bool(forKey: announceKey) ?? true)
-            
             //load remaining
             intArray = UserDefaults(suiteName: timersName[index])?.array(forKey: remainingKey) as? [Int] ?? [15, 30, 120, 180, 240, 300, 600, 900]
             remaining.append(intArray)
-            
             //load countdown
             intArray = UserDefaults(suiteName: timersName[index])?.array(forKey: countdownKey) as? [Int] ?? [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
             countdown.append(intArray)
@@ -66,10 +63,8 @@ class Announcer {
         for index in 0...2 {
             //save main switchers
             UserDefaults(suiteName: timersName[index])?.set(main[index], forKey: announceKey)
-            
             //save remaining
             UserDefaults(suiteName: timersName[index])?.set(remaining[index], forKey: remainingKey)
-            
             //save countdown
             UserDefaults(suiteName: timersName[index])?.set(countdown[index], forKey: countdownKey)
         }
@@ -105,7 +100,6 @@ class UserDefaultsModel {
 
         //Open the screen brightness lock
         UserDefaults.standard.set(true, forKey: lock)
-        
         for index in 0...2 {
             //save main switchers
             UserDefaults(suiteName: timersName[index])?.set(true, forKey: announceKey)
