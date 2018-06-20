@@ -8,16 +8,14 @@
 import AVFoundation
 import UIKit
 
+private let soundFileName =  "Ann_custom_timer_"
+
 final class AnnounceModel {
     var announcer = Announcer()
     var soundEffect: AVAudioPlayer?
     var displayTime: Int?
     var currentTimer: Int {
-        get {
-            return UserDefaults.standard.integer(forKey: "timerTag") - 1
-        }
-        set {
-        }
+        return UserDefaults.standard.integer(forKey: "timerTag") - 1
     }
     var temp: Int = -1
 
@@ -27,16 +25,14 @@ final class AnnounceModel {
 
     func playSound(displayTime: Int) {
 
-        if self.displayTime == displayTime {
-            return
-        } else {
+        if self.displayTime != displayTime {
             self.displayTime = displayTime
         }
 
         if announcer.remaining[currentTimer].contains(displayTime) {
             temp = displayTime
 
-            guard let path = Bundle.main.path(forResource: "Ann_custom_timer_" + String(displayTime), ofType: "mp3") else {
+            guard let path = Bundle.main.path(forResource: soundFileName + String(displayTime), ofType: "mp3") else {
                 return
             }
 

@@ -133,8 +133,8 @@ class TimeViewController: UIViewController {
     }
 
     @IBAction func pressStopWatchButton(_ sender: UIButton) {
+        //reset timer when user press this button when timer is running
         if status.targetTime != -1 {
-            //reset timer when user press this button when timer is running
             reset()
         }
         status.targetTime = -1
@@ -203,7 +203,6 @@ class TimeViewController: UIViewController {
         } else {
             display.text = String(seconds)
             display.font = display.font.withSize(display.font.pointSize * 0.55)
-
         }
 
         if !status.stopWatchIsOn, status.totalTime == 0 {

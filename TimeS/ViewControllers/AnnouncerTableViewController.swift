@@ -23,7 +23,7 @@ class AnnouncerTableViewController: UITableViewController {
         tableView.register(class: AnnouncerTableViewCell.self)
 
         remainingTime = Array(remaining.keys)
-        remainingTime.sort { $0 < $1 } // = list.sort(sort: <)
+        remainingTime.sort(by: <)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -39,7 +39,7 @@ final class ScreenLock {
     }
 }
 
-class Announcer {
+final class Announcer {
     var main = [Bool]()
     var remaining = [[Int]]()
     var countdown = [[Int]]()
@@ -71,7 +71,7 @@ class Announcer {
     }
 }
 
-class UserDefaultsModel {
+final class UserDefaultsModel {
     let t1settings = UserDefaults(suiteName: timersName[0])
     let t2settings = UserDefaults(suiteName: timersName[1])
     let t3settings = UserDefaults(suiteName: timersName[2])
