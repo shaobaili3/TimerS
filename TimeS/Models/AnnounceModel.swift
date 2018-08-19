@@ -8,7 +8,7 @@
 import AVFoundation
 import UIKit
 
-private let soundFileName =  "Ann_custom_timer_"
+private let SOUND_FILE_NAME =  "Ann_custom_timer_"
 
 final class AnnounceModel {
     var announcer = Announcer()
@@ -32,7 +32,7 @@ final class AnnounceModel {
         if announcer.remaining[currentTimer].contains(displayTime) {
             temp = displayTime
 
-            guard let path = Bundle.main.path(forResource: soundFileName + String(displayTime), ofType: "mp3") else {
+            guard let path = Bundle.main.path(forResource: SOUND_FILE_NAME + String(displayTime), ofType: "mp3") else {
                 return
             }
 
