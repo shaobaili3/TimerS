@@ -56,8 +56,6 @@ class SettingViewController: UIViewController {
         if timePickView.subviews.count >= 5 {
             timePickView.subviews[5].backgroundColor = UIColor.white
             timePickView.subviews[4].backgroundColor = UIColor.white
-        } else {
-            return
         }
     }
 
@@ -126,8 +124,6 @@ class SettingViewController: UIViewController {
         if timePickView.subviews.count >= 5 {
             timePickView.subviews[5].backgroundColor = UIColor.white
             timePickView.subviews[4].backgroundColor = UIColor.white
-        } else {
-            return
         }
     }
 }
@@ -169,7 +165,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
 extension SettingViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = "\(row)"
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font: UIFont(name: "Georgia", size: 15.0)!, NSAttributedStringKey.foregroundColor: UIColor.white])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedString.Key.font: UIFont(name: "Georgia", size: 15.0)!, NSAttributedString.Key.foregroundColor: UIColor.white])
         return myTitle
     }
 

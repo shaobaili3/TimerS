@@ -35,7 +35,7 @@ class AnnouncerTableViewController: UITableViewController {
         if indexPath.section == 1 {
             if currentCell?.accessoryType == .checkmark {
                 currentCell?.accessoryType = .none
-                let index = announcer?.countdown[selectedTimer!].index(of: indexPath.row)
+                let index = announcer?.countdown[selectedTimer!].firstIndex(of: indexPath.row)
                 announcer?.countdown[selectedTimer!].remove(at: index!)
             } else {
                 currentCell?.accessoryType = .checkmark
@@ -44,7 +44,7 @@ class AnnouncerTableViewController: UITableViewController {
         } else if indexPath.section == 2 {
             if currentCell?.accessoryType == .checkmark {
                 currentCell?.accessoryType = .none
-                let index = announcer?.remaining[selectedTimer!].index(of: remainingTime[indexPath.row])
+                let index = announcer?.remaining[selectedTimer!].firstIndex(of: remainingTime[indexPath.row])
                 announcer?.remaining[selectedTimer!].remove(at: index!)
             } else {
                 currentCell?.accessoryType = .checkmark
@@ -81,18 +81,10 @@ class AnnouncerTableViewController: UITableViewController {
         if indexPath.section == 2 {
             let currentRemaining = remainingTime[indexPath.row]
             cell.textLabel?.text = remaining[currentRemaining]
-            if (announcer?.remaining[selectedTimer!].contains(currentRemaining))! {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
-            }
+            cell.accessoryType = (announcer?.remaining[selectedTimer!].contains(currentRemaining))! ? .checkmark : .none
         } else if indexPath.section == 1 {
             cell.textLabel?.text = countdown[indexPath.row]
-            if (announcer?.countdown[selectedTimer!].contains(indexPath.row))! {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
-            }
+            cell.accessoryType = (announcer?.countdown[selectedTimer!].contains(indexPath.row))! ? .checkmark : .none
         }
         cell.textLabel?.textAlignment = .left
         cell.textLabel?.textColor = .white

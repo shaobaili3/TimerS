@@ -12,9 +12,9 @@
 
 ## Get Started
 
-This project is written by **Swift 4.0** and requires **Xcode 9+**.
+This project is written by **Swift 5.0** and requires **Xcode 10+**.
 
-1. Open the **TimerS.xcodeproj** in Xcode 9+
+1. Open the **TimerS.xcodeproj** in Xcode 10+
 1. Build and run
 
 ## Feature

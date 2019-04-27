@@ -12,9 +12,9 @@
 
 ## 开始使用
 
-该工程由**Swift 4.0** 和**Xcode 9+** 编写.
+该工程由**Swift 5.0** 和**Xcode 10+** 编写.
 
-* 使用Xcode 9+ 打开**TimerS.xcodeproj**
+* 使用Xcode 10+ 打开**TimerS.xcodeproj**
 * 运行
 
 ## 特征
